@@ -1,86 +1,39 @@
-=== Twenty Seventeen ===
-Contributors: the WordPress team
-Requires at least: WordPress 4.7
-Tested up to: WordPress 5.0-trunk
-Version: 1.4
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+IMPORTANT - PLEASE READ: http://tidythemes.com/concept/
 
-== Description ==
+YOU MAY DELETE THIS FILE AND ANY OTHER FILE(S) BEFORE STARTING YOUR PROJECT
 
-Twenty Seventeen brings your site to life with header video and immersive featured images. With a focus on business sites, it features multiple sections on the front page as well as widgets, navigation and social menus, a logo, and more. Personalize its asymmetrical grid with a custom color scheme and showcase your multimedia content with post formats. Our default theme for 2017 works great in many languages, for any abilities, and on any device.
+If you're creating your own theme/client project open up all files and do a "Find and Replace All in All Files" on the word "blankslate" with your own slug/prefix.
 
-For more information about Twenty Seventeen please go to https://codex.wordpress.org/Twenty_Seventeen.
+- - THEME - -
 
-== Installation ==
+BlankSlate WordPress Theme
+Demo: http://wp-themes.com/blankslate/
+Download: https://wordpress.org/themes/blankslate
 
-1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
-2. Type in Twenty Seventeen in the search form and press the 'Enter' key on your keyboard.
-3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://codex.wordpress.org/Twenty_Seventeen for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+- - DESCRIPTION - -
 
-== Copyright ==
+This theme is aimed at web pros, but is of course available and supported for anyone.
 
-Twenty Seventeen WordPress Theme, Copyright 2016 WordPress.org
-Twenty Seventeen is distributed under the terms of the GNU GPL
+The bare essentials of a WordPress theme, no visual CSS styles added except for the CSS reset and the mandatory WP classes. Perfect for those who would like to build their own theme completely from scratch.
 
-This program is free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 2 of the License, or
-(at your option) any later version.
+One custom menu and one widgetized sidebar to get you started.
 
-This program is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
-GNU General Public License for more details.
+If you'd like a jumpstart with a CSS framework and more custom menus, page templates and widgetized areas, checkout SuperSimple:
 
-Twenty Seventeen bundles the following third-party resources:
+http://tidythemes.com/supersimple/
 
-HTML5 Shiv, Copyright 2014 Alexander Farkas
-Licenses: MIT/GPL2
-Source: https://github.com/aFarkas/html5shiv
+- - COPYRIGHT & LICENSE - -
 
-jQuery scrollTo, Copyright 2007-2015 Ariel Flesler
-License: MIT
-Source: https://github.com/flesler/jquery.scrollTo
+In its unchanged/original state, BlankSlate is...
 
-normalize.css, Copyright 2012-2016 Nicolas Gallagher and Jonathan Neal
-License: MIT
-Source: https://necolas.github.io/normalize.css/
+© 2011-2017 TidyThemes
+GNU General Public License | https://www.gnu.org/licenses/gpl.html
 
-Font Awesome icons, Copyright Dave Gandy
-License: SIL Open Font License, version 1.1.
-Source: http://fontawesome.io/
+...however, once you've significantly changed the theme to build your own unique
+project, either for yourself or for a client under a different theme name (as is encouraged) you're entirely welcome to copyright and license that project as you see fit.
 
-Bundled header image, Copyright Alvin Engler
-License: CC0 1.0 Universal (CC0 1.0)
-Source: https://unsplash.com/@englr?photo=bIhpiQA009k
+- - SUPPORT - -
 
-== Changelog ==
+http://tidythemes.com/forum/
 
-= 1.4 =
-* Released: November 14, 2017
-
-https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.4
-
-= 1.3 =
-* Released: June 8, 2017
-
-https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.3
-
-= 1.2 =
-* Released: April 18, 2017
-
-https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.2
-
-= 1.1 =
-* Released: January 6, 2017
-
-https://codex.wordpress.org/Twenty_Seventeen_Theme_Changelog#Version_1.1
-
-= 1.0 =
-* Released: December 6, 2016
-
-Initial release
+Enjoy. Thanks, TidyThemes | http://tidythemes.com/

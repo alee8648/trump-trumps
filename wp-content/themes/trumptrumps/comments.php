@@ -1,82 +1,41 @@
-<?php
-/**
- * The template for displaying comments
- *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
- *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package WordPress
- * @subpackage Twenty_Seventeen
- * @since 1.0
- * @version 1.0
- */
-
-/*
- * If the current post is protected by a password and
- * the visitor has not yet entered the password we will
- * return early without loading the comments.
- */
-if ( post_password_required() ) {
-	return;
-}
+<?php if ( 'comments.php' == basename( $_SERVER['SCRIPT_FILENAME'] ) ) return; ?>
+<section id="comments">
+<?php 
+if ( have_comments() ) : 
+global $comments_by_type;
+$comments_by_type = &separate_comments( $comments );
+if ( ! empty( $comments_by_type['comment'] ) ) : 
 ?>
-
-<div id="comments" class="comments-area">
-
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
-		<h2 class="comments-title">
-			<?php
-			$comments_number = get_comments_number();
-			if ( '1' === $comments_number ) {
-				/* translators: %s: post title */
-				printf( _x( 'One Reply to &ldquo;%s&rdquo;', 'comments title', 'twentyseventeen' ), get_the_title() );
-			} else {
-				printf(
-					/* translators: 1: number of comments, 2: post title */
-					_nx(
-						'%1$s Reply to &ldquo;%2$s&rdquo;',
-						'%1$s Replies to &ldquo;%2$s&rdquo;',
-						$comments_number,
-						'comments title',
-						'twentyseventeen'
-					),
-					number_format_i18n( $comments_number ),
-					get_the_title()
-				);
-			}
-			?>
-		</h2>
-
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'avatar_size' => 100,
-					'style'       => 'ol',
-					'short_ping'  => true,
-					'reply_text'  => twentyseventeen_get_svg( array( 'icon' => 'mail-reply' ) ) . __( 'Reply', 'twentyseventeen' ),
-				) );
-			?>
-		</ol>
-
-		<?php the_comments_pagination( array(
-			'prev_text' => twentyseventeen_get_svg( array( 'icon' => 'arrow-left' ) ) . '<span class="screen-reader-text">' . __( 'Previous', 'twentyseventeen' ) . '</span>',
-			'next_text' => '<span class="screen-reader-text">' . __( 'Next', 'twentyseventeen' ) . '</span>' . twentyseventeen_get_svg( array( 'icon' => 'arrow-right' ) ),
-		) );
-
-	endif; // Check for have_comments().
-
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-
-		<p class="no-comments"><?php _e( 'Comments are closed.', 'twentyseventeen' ); ?></p>
-	<?php
-	endif;
-
-	comment_form();
-	?>
-
-</div><!-- #comments -->
+<section id="comments-list" class="comments">
+<h3 class="comments-title"><?php comments_number(); ?></h3>
+<?php if ( get_comment_pages_count() > 1 ) : ?>
+<nav id="comments-nav-above" class="comments-navigation" role="navigation">
+<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
+</nav>
+<?php endif; ?>
+<ul>
+<?php wp_list_comments( 'type=comment' ); ?>
+</ul>
+<?php if ( get_comment_pages_count() > 1 ) : ?>
+<nav id="comments-nav-below" class="comments-navigation" role="navigation">
+<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
+</nav>
+<?php endif; ?>
+</section>
+<?php 
+endif; 
+if ( ! empty( $comments_by_type['pings'] ) ) : 
+$ping_count = count( $comments_by_type['pings'] ); 
+?>
+<section id="trackbacks-list" class="comments">
+<h3 class="comments-title"><?php echo '<span class="ping-count">' . $ping_count . '</span> ' . ( $ping_count > 1 ? __( 'Trackbacks', 'blankslate' ) : __( 'Trackback', 'blankslate' ) ); ?></h3>
+<ul>
+<?php wp_list_comments( 'type=pings&callback=blankslate_custom_pings' ); ?>
+</ul>
+</section>
+<?php 
+endif; 
+endif;
+if ( comments_open() ) comment_form();
+?>
+</section>
