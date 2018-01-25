@@ -7,8 +7,8 @@ function trumps_register_post_types()
 {
 	$trump_card_args = array(
 		'labels' 				=> array(
-				'name' 				=> 'Trump Trumps Cards',
-				'singular_name' 	=> 'Trump Trumps Card',
+			'name' 				=> 'Trump Trumps Cards',
+			'singular_name' 	=> 'Trump Trumps Card',
 		),
 		'description' 			=> 'Each Trump Trumps card is a collection of the stats pertaining to one card.',
 		'public'				=> true,
