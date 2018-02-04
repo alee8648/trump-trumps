@@ -15,6 +15,7 @@ function trumps_register_post_types()
 		'show_ui' 				=> true,
 		'has_archive' 			=> true,
 		'show_in_menu' 			=> true,
+		'show_in_rest'			=> true,
 		'menu_position' 		=> '1',
 		'exclude_from_search' 	=> false,
 		'capability_type' 		=> 'post',
